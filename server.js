@@ -125,11 +125,12 @@ async function generatePNG(req, res, redis) {
 
   // Save to redis
   if (redis != null) {
+	console.log('Saving to redis');
     redis.set(cacheKey, png, function(err) {
       redis.quit()
     })
   }
-
+	console.log('Sending response ');
   // Return response
   sendPNG(res, png, filename)
 }
