@@ -119,7 +119,7 @@ async function generatePNG(req, res, redis) {
   // Convert to PNG
   const png = await convert(element.innerHTML, {
     'height' : size,
-  'width' : size}//,
+    'width' : size//,
     //'puppeteer' : {'args' : ['--no-sandbox', '--disable-setuid-sandbox']}
   });
 
